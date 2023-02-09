@@ -60,14 +60,15 @@ Run the following commands.
 1.  What does `git help` do?
 
     ```
-
+git help gives you commonly used commands and describes what each command does
 
     ```
 
 2.  What does `-ag` cause `git help` to do?
 
     ```
-
+git help -a allows me to search inside of the help guide
+git help -g brings up the concpet guides
 
 
     ```
@@ -90,7 +91,7 @@ consider changing this configuration before you walk away.
 1.  What are these commands doing?
 
     ```
-
+these commands are changing your username and email to what you want it to be
 
 
     ```
@@ -98,7 +99,7 @@ consider changing this configuration before you walk away.
 2.  What is the purpose of `--global`?
 
     ```
-
+global meaning anyone who uses git will see your name and email
 
 
     ```
@@ -117,14 +118,14 @@ cd first_project
     display a hidden file?
 
     ```
-
+use the ls command with the -a flag
 
     ```
 
 2. Run this command to show the hidden files in the current directory. Are there any?
 
     ```
-
+there are two hidden files
 
 
     ```
@@ -139,7 +140,7 @@ cd first_project
 4. Check for hidden files again.  What was created by `git init`?
 
     ```
-
+a .git repository was created, and the file name now has (master next to it)
 
 
     ```
@@ -148,7 +149,7 @@ cd first_project
 3.  What do you think would happen if you delete `.git`?
 
     ```
-
+the git repository would be deleted and I could push the contents of the project to git
 
 
     ```
@@ -159,7 +160,8 @@ cd first_project
     if the project is being managed using Git?
 
     ```
-
+go into the file and use the ls -a command to see the hidden files
+then look for a git repository, if there is one it is being managed by git
 
 
     ```
@@ -179,7 +181,7 @@ Run `git status` before and after each of these commands.
 1.  What kind of information does `git status` report?
 
     ```
-
+content that was committed to git, and files that you can commit
 
 
     ```
@@ -187,7 +189,7 @@ Run `git status` before and after each of these commands.
 2.  What does `git add names.txt` do?
 
     ```
-
+adds the names.txt file to the staging area to be committed
 
 
     ```
@@ -195,7 +197,7 @@ Run `git status` before and after each of these commands.
 3.  What does `git commit -m "Add our names."` do?
 
     ```
-
+commits the files in the staging area and leaves the comment "Add out names."
 
 
     ```
@@ -216,7 +218,7 @@ Run `git status` before and after each of these commands.
 4.  What does `git add .` do? What do you think `.` means?
 
     ```
-
+it added both new files to the staging area, I think the '.' might mean to add any file with a '.' in the name to the staging area
 
 
     ```
@@ -224,7 +226,7 @@ Run `git status` before and after each of these commands.
 5.  What does `git commit` (without -m) do?
 
     ```
-
+git commit without the -m flag commits the files in the staging area without a comment, sends you to vim to make a comment
 
 
     ```
@@ -233,7 +235,7 @@ Run `git status` before and after each of these commands.
     good practice) what command would you use?
 
     ```
-
+you should just use the git commit command without the flag because you are sent to a vim file to make a comment.
 
 
     ```
@@ -241,7 +243,7 @@ Run `git status` before and after each of these commands.
 7.  What does `git log` do?
 
     ```
-
+Shows a list or log of all commits that you've made
 
 
     ```
@@ -271,7 +273,7 @@ Run the following commands:
     **Staged**
 
     ```
-
+names.txt
 
 
     ```
@@ -279,7 +281,7 @@ Run the following commands:
     **Unstaged**
 
     ```
-
+foods.txt
 
 
     ```
@@ -287,8 +289,8 @@ Run the following commands:
     **Untracked**
 
     ```
-
-
+birthdays.txt
+movies.txt
 
     ```
 
@@ -296,7 +298,7 @@ Run the following commands:
     it***)?
 
     ```
-
+the change to names
 
 
     ```
@@ -304,7 +306,7 @@ Run the following commands:
 2.  What command do you run to stage changes?
 
     ```
-
+git add
 
 
     ```
@@ -312,7 +314,7 @@ Run the following commands:
 3.  What command do you run to unstage changes?
 
     ```
-
+git reset 
 
 
     ```
@@ -326,14 +328,14 @@ Run the following commands:
 
     ```
 
-
+nothing
 
     ```
 
 2.  What does `git diff --cached` display?
 
     ```
-
+it shows two files for names, I'm guessing two because I modified it
 
 
     ```
@@ -343,7 +345,8 @@ Run the following commands:
     confirm they worked.
 
     ```
-
+git reset names.txt
+git add movies.txt
 
 
     ```
@@ -353,7 +356,7 @@ Run the following commands:
     going on.
 
     ```
-
+movies.txt was added to the unstaged. When you modify a file a new variation of that file is created and has to be staged and committed
 
 
     ```
@@ -362,7 +365,7 @@ Run the following commands:
     Explain what you think is going on.
 
     ```
-
+names.txt is no longer in the status report, I think I removed the file from the directory
 
 
     ```
@@ -371,7 +374,7 @@ Run the following commands:
     and explain.
 
     ```
-
+The name of the file in the status report was changed, movies.txt was deleted and replaced with the new name
 
 
     ```
@@ -381,7 +384,8 @@ Run the following commands:
     Execute them.
 
     ```
-
+git add .
+git commit -m "all files committed"
 
 
     ```
@@ -390,7 +394,7 @@ Run the following commands:
     same thing. What does it hold?
 
     ```
-
+it holds all file that are awaiting to be committed to the git repository
 
 
     ```
@@ -399,7 +403,7 @@ Run the following commands:
     commit?
 
     ```
-
+there is a stage so that you can add a file to it, modify it and then commit it once your work is done instead of constantly committing over and over again
 
 
     ```
@@ -418,7 +422,7 @@ Run the following commands:
 1.  What does `git reset --soft ``"HEAD^" `do?
 
     ```
-
+it removed the most recetn commit from the git log
 
 
     ```
@@ -435,7 +439,7 @@ Run the following commands:
 1.  What does `git reset --hard "HEAD^"`` `do?
 
     ```
-
+looks like it does the same thing, just removes the most recent commit from the log
 
 
     ```
@@ -443,7 +447,8 @@ Run the following commands:
 2.  What is the difference between `--hard` and `--soft`?
 
     ```
-
+--soft stages all changes back and keeps the files
+--hard removes all the files completely
 
 
     ```
@@ -451,14 +456,14 @@ Run the following commands:
 3.  What do you think `HEAD` means?
 
     ```
-
+I think that it mean the top of the log
 
     ```
 
 4.  What do you think `HEAD^` means?
 
     ```
-
+I'm not sure the difference with the ^ addes in it
 
     ```
 
